@@ -1,9 +1,214 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="zh-CN" dir="ltr"> <!--<![endif]-->
 <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>Shadow</title>
+    <link href="http://mopvhs.github.io" rel="dns-prefetch" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="icon" href="./static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/2.1.3/normalize.min.css" />
+    <link rel="stylesheet" href="./static/reset.css" />
+    <link rel="stylesheet" href="./static/style.css" />
+    <script type="text/javascript">
+        var cssArray = [];
+    </script>
 </head>
 <body>
 
+<div class="header top-show">
+    <div class="content">
+        <div class="ui-grid-row">
+            <div class="ui-grid-25 top-show">
+                <!--<div class="logo">Now You See Me, Now You Don’t</div>-->
+                <div class="logo"><i class="iconfont">&#xf01e4;</i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <div class="ui-gird-row" id="g-nav">
+        <div class="ui-nav">
+            <ul class="ui-nav-main">
+                <li class="ui-nav-item ui-nav-item-current">
+                    <a href="#">首页</a>
+                    <ul class="ui-nav-submain">
+                        <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#"><i class="iconfont">&#xf0205;</i>&nbsp;&nbsp;白昼</a></li>
+                        <li class="ui-nav-subitem"><a href="#"><i class="iconfont">&#xf01e4;</i>&nbsp;&nbsp;黑夜</a></li>
+                        <li class="ui-nav-subitem"><a href="#"><i class="iconfont">&#x343c;</i>&nbsp;&nbsp;时间滴答滴答就消逝了</a></li>
+                    </ul>
+                </li>
+                <li class="ui-nav-item">
+                    <a href="#">日常生活</a>
+                    <ul class="ui-nav-submain">
+                        <li class="ui-nav-subitem"><a href="#">点餐</a></li>
+                        <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#">聚会</a></li>
+                        <li class="ui-nav-subitem"><a href="#">二级导航 2-3</a></li>
+                    </ul>
+                </li>
+                <li class="ui-nav-item">
+                    <a href="#">在线工具</a>
+                    <ul class="ui-nav-submain">
+                        <li class="ui-nav-subitem"><a href="#">二级导航 3-1</a></li>
+                        <li class="ui-nav-subitem"><a href="#">二级导航 3-2</a></li>
+                        <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#">二级导航 3-3</a></li>
+                    </ul>
+                </li>
+                <li class="ui-nav-item"><a href="#">土豪的世界</a></li>
+            </ul>
+            <div class="ui-nav-subcontainer"></div>
+        </div>
+    </div>
+    <div class="ui-grid-row">
+        <div class="ui-grid-5 sidebar"></div>
+        <div class="ui-grid-15 main" style="background: #fff;">
+            <form class="ui-form" name="" method="post" action="#" id="">
+                <fieldset>
+                    <legend>表单标题</legend>
+
+                    <div class="ui-form-item">
+                        <label for="" class="ui-label"></label>
+                        <p class="ui-form-text">
+                    </div>
+
+                    <div class="ui-form-item">
+                        <label for="" class="ui-label">
+                            <span class="ui-form-required">*</span>邮箱
+                        </label>
+                        <input class="ui-input" type="text"> <span class="ui-form-other"></span>
+                        <p class="ui-form-explain"></p>
+                    </div>
+
+                    <div class="ui-form-item">
+                        <label for="" class="ui-label">
+                            <span class="ui-form-required">*</span>用户名
+                        </label>
+                        <input class="ui-input" type="text"> <span class="ui-form-other"></span>
+                        <p class="ui-form-explain"></p>
+                    </div>
+
+                    <div class="ui-form-item">
+                        <label for="" class="ui-label">
+                            <span class="ui-form-required">*</span>密码
+                        </label>
+                        <input class="ui-input ui-input-large" type="password"> <span class="ui-form-other"></span>
+                        <p class="ui-form-explain"></p>
+                    </div>
+
+                    <div class="ui-form-item">
+                        <label for="test">
+                            <input class="ui-checkbox" id="test" value="" type="checkbox">
+                            我已阅读并接受自主缴费服务协议
+                        </label>
+                    </div>
+
+                    <div class="ui-form-item">
+                        <input type="submit" class="ui-button ui-button-morange" value="登录">
+                        <input type="button" class="ui-button ui-button-mwhite" value="注册">
+                    </div>
+                </fieldset>
+            </form>
+            <!--
+            <div class="ui-tab" id="tab-demo-1">
+                <ul class="ui-tab-items ui-switchable-nav">
+                    <li class="ui-tab-item">
+                        <a href="javascript:;">全部交易</a>
+                    </li>
+                    <li class="ui-tab-item">
+                        <a href="javascript:;">进行中的交易</a>
+                    </li>
+                    <li class="ui-tab-item">
+                        <a href="javascript:;">等待发货的交易</a>
+                    </li>
+                    <li class="ui-tab-item">
+                        <a href="javascript:;">未确认收获的交易</a>
+                    </li>
+                </ul>
+                <div class="ui-switchable-content">
+                    <div class="hidden">
+                        <i class="iconfont">&#x344c;</i>199
+                    </div>
+                    <div class="hidden">内容 B</div>
+                    <div class="hidden">内容 C</div>
+                    <div class="hidden">内容 D</div>
+                </div>
+            </div>-->
+        </div>
+        <div class="ui-grid-5 sidebar"></div>
+    </div>
+</div>
+
+<div class="footer">
+    <ul class="nav-bottom">
+        <li><a href="javascript:;">首页</a><span class="divider">|</span></li>
+        <li><a href="javascript:;">博客</a><span class="divider">|</span></li>
+        <li><a href="javascript:;">教程</a><span class="divider">|</span></li>
+        <li><a href="javascript:;">论坛</a><span class="divider">|</span></li>
+        <li><a href="javascript:;">工具</a><span class="divider">|</span></li>
+        <li><a href="javascript:;">关于本站</a></li>
+    </ul>
+    <div class="copyright">© 2009-2014 Power By 屠龙之技</div>
+</div>
+
 </body>
+<script charset="utf-8" id="seajsnode" src="sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+<!-- seajs config 配置 -->
+<script src="./static/seajs-config.js"></script>
+<script>
+    cssArray.push('gallery/normalize/2.1.3/normalize.css');
+    cssArray.push('alice/nav/1.0.0/nav.css');
+    cssArray.push('alice/form/1.0.2/form.css');
+    cssArray.push('alice/button/1.2.0/button.css');
+    try {
+        (function() {
+            seajs.config({
+                base: "./sea-modules",
+                alias: {
+                    "$": "atans/jquery/1.10.2/jquery",
+                    "jquery": "atans/jquery/1.10.2/jquery",
+                    "alice-gird": "alice/grid/1.0.0/grid.css",
+                    "alice-tab": "alice/tab/1.0.1/tab.css",
+                    "alice-table": "alice/table/1.0.1/table.css"
+                },
+                // 预加载项
+                preload: [
+                    'jquery',
+                    'alice-gird',
+                    "alice-tab",
+                    'alice-table'
+                ],
+                // 文件编码
+                charset: 'utf-8'
+            });
+            seajs.use(['arale/switchable/1.0.2/tabs'], function(Tabs) {
+                tabs = new Tabs({
+                    element: '#tab-demo-1',
+                    triggers: '.ui-switchable-nav li',
+                    panels: '.ui-switchable-content div',
+                    activeIndex: 0,
+                    effect: 'none',
+                    activeTriggerClass: 'ui-tab-item-current'
+                });
+            });
+            // 加载依赖的 css 文件
+            for (var i=0; i < cssArray.length; i++) {
+                if (cssArray[i].indexOf('.css') < 0) {
+                    cssArray.splice(i, 1);
+                }
+            }
+            seajs.use(cssArray);
+        })();
+    } catch (e) {
+        window.console && console.log && console.log(e);
+    }
+</script>
 </html>
