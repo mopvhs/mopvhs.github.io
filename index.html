@@ -28,7 +28,7 @@
         <div class="ui-grid-row">
             <div class="ui-grid-25 top-show">
                 <!--<div class="logo">Now You See Me, Now You Don’t</div>-->
-                <div class="logo"><i class="iconfont">&#xf01e4;</i></div>
+                <div class="logo" id="clickme"><i class="iconfont">&#xf01e4;</i></div>
             </div>
         </div>
     </div>
@@ -71,77 +71,105 @@
     <div class="ui-grid-row">
         <div class="ui-grid-5 sidebar"></div>
         <div class="ui-grid-15 main" style="background: #fff;">
-            <form class="ui-form" name="" method="post" action="#" id="">
-                <fieldset>
-                    <legend>表单标题</legend>
+            <div id="login-box">
+                <div class="ui-tab" id="tab-demo-1">
+                    <ul class="ui-tab-items ui-switchable-nav">
+                        <li class="ui-tab-item">
+                            <a href="javascript:;">登录</a>
+                        </li>
+                        <li class="ui-tab-item">
+                            <a href="javascript:;">注册</a>
+                        </li>
+                    </ul>
+                    <div class="ui-switchable-content">
 
-                    <div class="ui-form-item">
-                        <label for="" class="ui-label"></label>
-                        <p class="ui-form-text">
-                    </div>
+                        <div class="hidden">
+                            <form class="ui-form" name="" method="post" action="#" id="login-form">
+                                <fieldset>
+                                    <legend>登录</legend>
 
-                    <div class="ui-form-item">
-                        <label for="" class="ui-label">
-                            <span class="ui-form-required">*</span>邮箱
-                        </label>
-                        <input class="ui-input" type="text"> <span class="ui-form-other"></span>
-                        <p class="ui-form-explain"></p>
-                    </div>
+                                    <div class="ui-form-item">
+                                        <label for="" class="ui-label"></label>
+                                        <p class="ui-form-text"></p>
+                                    </div>
 
-                    <div class="ui-form-item">
-                        <label for="" class="ui-label">
-                            <span class="ui-form-required">*</span>用户名
-                        </label>
-                        <input class="ui-input" type="text"> <span class="ui-form-other"></span>
-                        <p class="ui-form-explain"></p>
-                    </div>
+                                    <div class="ui-form-item">
+                                        <label for="" class="ui-label">
+                                            <span class="ui-form-required">*</span>邮箱
+                                        </label>
+                                        <input class="ui-input" type="text"> <span class="ui-form-other"></span>
+                                        <p class="ui-form-explain"></p>
+                                    </div>
 
-                    <div class="ui-form-item">
-                        <label for="" class="ui-label">
-                            <span class="ui-form-required">*</span>密码
-                        </label>
-                        <input class="ui-input ui-input-large" type="password"> <span class="ui-form-other"></span>
-                        <p class="ui-form-explain"></p>
-                    </div>
+                                    <div class="ui-form-item">
+                                        <label for="" class="ui-label">
+                                            <span class="ui-form-required">*</span>密码
+                                        </label>
+                                        <input class="ui-input ui-input-large" type="password"> <span class="ui-form-other"></span>
+                                        <p class="ui-form-explain"></p>
+                                    </div>
 
-                    <div class="ui-form-item">
-                        <label for="test">
-                            <input class="ui-checkbox" id="test" value="" type="checkbox">
-                            我已阅读并接受自主缴费服务协议
-                        </label>
-                    </div>
+                                    <div class="ui-form-item">
+                                        <input type="submit" class="ui-button ui-button-morange" value="登录">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
 
-                    <div class="ui-form-item">
-                        <input type="submit" class="ui-button ui-button-morange" value="登录">
-                        <input type="button" class="ui-button ui-button-mwhite" value="注册">
+                        <div class="hidden">
+                            <form class="ui-form" name="" method="post" action="#" id="register-form">
+                                <fieldset>
+                                    <legend>注册</legend>
+
+                                    <div class="ui-form-item">
+                                        <label for="" class="ui-label"></label>
+                                        <p class="ui-form-text"></p>
+                                    </div>
+
+                                    <div class="ui-form-item">
+                                        <label for="" class="ui-label">
+                                            <span class="ui-form-required">*</span>邮箱
+                                        </label>
+                                        <input class="ui-input" type="text"> <span class="ui-form-other"></span>
+                                        <p class="ui-form-explain"></p>
+                                    </div>
+
+                                    <div class="ui-form-item">
+                                        <label for="" class="ui-label">
+                                            <span class="ui-form-required">*</span>用户名
+                                        </label>
+                                        <input class="ui-input" type="text"> <span class="ui-form-other"></span>
+                                        <p class="ui-form-explain"></p>
+                                    </div>
+
+                                    <div class="ui-form-item">
+                                        <label for="" class="ui-label">
+                                            <span class="ui-form-required">*</span>密码
+                                        </label>
+                                        <input class="ui-input ui-input-large" type="password"> <span class="ui-form-other"></span>
+                                        <p class="ui-form-explain"></p>
+                                    </div>
+
+                                    <div class="ui-form-item">
+                                        <label for="test">
+                                            <input class="ui-checkbox" id="test" value="" type="checkbox">
+                                            我已阅读并接受自主缴费服务协议
+                                        </label>
+                                    </div>
+
+                                    <div class="ui-form-item">
+                                        <input type="button" class="ui-button ui-button-mwhite" value="注册">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+
                     </div>
-                </fieldset>
-            </form>
-            <!--
-            <div class="ui-tab" id="tab-demo-1">
-                <ul class="ui-tab-items ui-switchable-nav">
-                    <li class="ui-tab-item">
-                        <a href="javascript:;">全部交易</a>
-                    </li>
-                    <li class="ui-tab-item">
-                        <a href="javascript:;">进行中的交易</a>
-                    </li>
-                    <li class="ui-tab-item">
-                        <a href="javascript:;">等待发货的交易</a>
-                    </li>
-                    <li class="ui-tab-item">
-                        <a href="javascript:;">未确认收获的交易</a>
-                    </li>
-                </ul>
-                <div class="ui-switchable-content">
-                    <div class="hidden">
-                        <i class="iconfont">&#x344c;</i>199
-                    </div>
-                    <div class="hidden">内容 B</div>
-                    <div class="hidden">内容 C</div>
-                    <div class="hidden">内容 D</div>
                 </div>
-            </div>-->
+            </div>
+
+
+
         </div>
         <div class="ui-grid-5 sidebar"></div>
     </div>
@@ -168,13 +196,17 @@
     cssArray.push('alice/nav/1.0.0/nav.css');
     cssArray.push('alice/form/1.0.2/form.css');
     cssArray.push('alice/button/1.2.0/button.css');
+    cssArray.push('arale/dialog/1.2.5/dialog.css');
     try {
         (function() {
             seajs.config({
                 base: "./sea-modules",
                 alias: {
-                    "$": "atans/jquery/1.10.2/jquery",
-                    "jquery": "atans/jquery/1.10.2/jquery",
+//                    "$": "atans/jquery/1.10.2/jquery",
+                    "$": "jquery/jquery/1.7.2/jquery",
+                    "jquery": "jquery/jquery/1.7.2/jquery",
+                    "jquery172": "jquery/jquery/1.7.2/jquery",
+                    "dialog": "arale/dialog/1.2.5/dialog",
                     "alice-gird": "alice/grid/1.0.0/grid.css",
                     "alice-tab": "alice/tab/1.0.1/tab.css",
                     "alice-table": "alice/table/1.0.1/table.css"
@@ -189,11 +221,34 @@
                 // 文件编码
                 charset: 'utf-8'
             });
+            /*
+            seajs.use(['arale/dialog/1.2.5/dialog'], function(Dialog) {
+                new Dialog({
+                    content: '<div style="padding:50px">没有 trigger，直接显示出来</div>'
+                }).show();
+            });
+            */
+            seajs.use(['dialog','$'], function(Dialog, $) {
+                new Dialog({
+                    trigger: '#clickme',
+                    content: $('#login-box')
+                });
+            });
+            seajs.use('$', function($) {
+                $('#trigger').click(function(e){
+                    e.preventDefault();
+                });
+                try {
+
+                } catch(e) {
+                    console.log(e);
+                }
+            });
             seajs.use(['arale/switchable/1.0.2/tabs'], function(Tabs) {
                 tabs = new Tabs({
                     element: '#tab-demo-1',
                     triggers: '.ui-switchable-nav li',
-                    panels: '.ui-switchable-content div',
+                    panels: '.ui-switchable-content .hidden',
                     activeIndex: 0,
                     effect: 'none',
                     activeTriggerClass: 'ui-tab-item-current'
