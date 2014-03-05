@@ -42,9 +42,12 @@
                 <li class="ui-nav-item ui-nav-item-current">
                     <a href="#">首页</a>
                     <ul class="ui-nav-submain">
-                        <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#"><i class="iconfont">&#xf0205;</i>&nbsp;&nbsp;白昼</a></li>
-                        <li class="ui-nav-subitem"><a href="#"><i class="iconfont">&#xf01e4;</i>&nbsp;&nbsp;黑夜</a></li>
+                        <!--<li class="ui-nav-subitem"><a href=""></a></li>-->
+                        <li class="ui-nav-subitem subitem-day"><a href="#"><i class="iconfont">&#xf0205;</i>&nbsp;&nbsp;白昼</a></li>
+                        <li class="ui-nav-subitem subitem-night"><a href="#"><i class="iconfont">&#xf01e4;</i>&nbsp;&nbsp;黑夜</a></li>
                         <li class="ui-nav-subitem"><a href="#"><i class="iconfont">&#x343c;</i>&nbsp;&nbsp;时间滴答滴答就消逝了</a></li>
+                        <li class="ui-nav-subitem"><a href="javascript:;"><i class="iconfont">&#x346b;</i>&nbsp;&nbsp;<span class="user-status">离线</span></a></li>
+                        <li class="ui-nav-subitem"><a href="javascript:;"><i class="iconfont">&#x3479;</i>&nbsp;&nbsp;<span class="environment-status"></span></a></li>
                     </ul>
                 </li>
                 <!--
@@ -171,8 +174,6 @@
                 </div>
             </div>
 
-
-
         </div>
         <div class="ui-grid-5 sidebar"></div>
     </div>
@@ -192,6 +193,7 @@
 
 </body>
 <script charset="utf-8" id="seajsnode" src="sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+<!--<script src="sea-modules/seajs/seajs-combo/1.0.0/seajs-combo.js"></script>-->
 <!-- seajs config 配置 -->
 <script src="./static/seajs-config.js"></script>
 <script>
@@ -210,6 +212,7 @@
                     "jquery": "atans/jquery/1.10.2/jquery",
                     "jquery172": "jquery/jquery/1.7.2/jquery",
                     "dialog": "arale/dialog/1.2.5/dialog",
+                    "tabs": "arale/switchable/1.0.2/tabs",
                     "cookie": "arale/cookie/1.0.2/cookie",
                     "alice-gird": "alice/grid/1.0.0/grid.css",
                     "alice-tab": "alice/tab/1.0.1/tab.css",
@@ -227,140 +230,17 @@
                 // 文件编码
                 charset: 'utf-8'
             });
-            /*
-            seajs.use(['arale/dialog/1.2.5/dialog'], function(Dialog) {
-                new Dialog({
-                    content: '<div style="padding:50px">没有 trigger，直接显示出来</div>'
-                }).show();
-            });
-            */
-            seajs.use(['dialog','$'], function(Dialog, $) {
-                new Dialog({
-                    trigger: '#clickmed',
-                    content: $('#login-box')
-                });
-            });
+            var environment = 'production';
+            // For development
+            if (location.href.indexOf("?dev") > 0) {
+                environment = 'development';
+                seajs.use("./static/index/src/main");
+            }
+            // For production
+            else {
+                seajs.use("shadow/index/1.0.0/main");
+            }
 
-            seajs.use('$', function($) {
-                $(function() {
-                    var authStr = '', Cookie = {};
-                    seajs.use('cookie', function(C) {
-                        Cookie = C;
-                    });
-
-                    authStr = Cookie.get('auth_str');
-
-                    // Reuqest Start
-                    var request = $.ajax({
-                        url: "http://meal-dev.mopvhs.com/api/initialize/",
-                        type: "POST",
-                        data: { auth_str : authStr },
-                        dataType: "jsonp"
-                    });
-
-                    request.done(function( result ) {
-                        if(result.success) {
-                            console.log(result);
-                            seajs.use(['dialog'], function(Dialog) {
-                                new Dialog({
-                                    content: '<div style="padding:50px">请求成功！，' + result.message + '</div>'
-                                }).show();
-                            });
-                        } else {
-                            console.log(result);
-                            $('#login-box').show();
-                        }
-                    });
-
-                    request.fail(function( jqXHR, textStatus ) {
-                        seajs.use(['dialog'], function(Dialog) {
-                            new Dialog({
-                                content: '<div style="padding:50px">请求失败，' + textStatus + '，请刷新页面重试！</div>'
-                            }).show();
-                        });
-                    });
-                    // End Reuqest
-
-                    $('#login-btn').click(function(e){
-                        e.preventDefault();
-                        var formData = $('#login-form').serialize();
-                        var request = $.ajax({
-                            url: "http://meal-dev.mopvhs.com/api/login/",
-                            type: "POST",
-                            data: formData,
-                            dataType: "jsonp"
-                        });
-                        request.done(function( result ) {
-                            if(result.success) {
-                                Cookie.set('auth_str', result.auth_str, {
-                                    domain: 'github.io',
-                                    path: '/',
-                                    expires: 30
-                                });
-                            } else {
-                                console.log(result);
-                            }
-                        });
-                        request.fail(function( jqXHR, textStatus ) {
-                            seajs.use(['dialog'], function(Dialog) {
-                                new Dialog({
-                                    content: '<div style="padding:50px">请求失败，' + textStatus + '，请刷新页面重试！</div>'
-                                }).show();
-                            });
-                        });
-
-                    });
-
-                    $('#register-btn').click(function(e){
-                        e.preventDefault();
-                        var formData = $('#register-form').serialize();
-                        console.log(formData);
-                        var request = $.ajax({
-                            url: "http://meal-dev.mopvhs.com/api/register",
-                            type: "POST",
-                            data: formData,
-                            dataType: "jsonp"
-                        });
-                        request.done(function( result ) {
-                            console.log(result);
-                            if(result.success) {
-                                Cookie.set('auth_str', result.auth_str, {
-                                    domain: 'github.io',
-                                    path: '/',
-                                    expires: 30
-                                });
-                            } else {
-                                console.log(result);
-                            }
-                        });
-                        request.fail(function( jqXHR, textStatus ) {
-                            seajs.use(['dialog'], function(Dialog) {
-                                new Dialog({
-                                    content: '<div style="padding:50px">请求失败，' + textStatus + '，请刷新页面重试！</div>'
-                                }).show();
-                            });
-                        });
-                    });
-
-                    $('#clickme').click(function(e){
-                        e.preventDefault();
-                        seajs.use('cookie', function(Cookie) {
-                            console.log(Cookie);
-                        });
-                    });
-                });
-
-            });
-            seajs.use(['arale/switchable/1.0.2/tabs'], function(Tabs) {
-                tabs = new Tabs({
-                    element: '#tab-demo-1',
-                    triggers: '.ui-switchable-nav li',
-                    panels: '.ui-switchable-content .hidden',
-                    activeIndex: 0,
-                    effect: 'none',
-                    activeTriggerClass: 'ui-tab-item-current'
-                });
-            });
             // 加载依赖的 css 文件
             for (var i=0; i < cssArray.length; i++) {
                 if (cssArray[i].indexOf('.css') < 0) {

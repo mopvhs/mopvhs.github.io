@@ -1,0 +1,29 @@
+{
+    "family": "shadow",
+    "name": "static",
+    "version": "1.0.0",
+    "description": "Static Files",
+    "homepage": "https://github.com/root/static",
+    "author": "mopvhs",
+    "maintainers": [
+        "mopvhs"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/root/static.git"
+    },
+    "bugs": {
+        "url": ""
+    },
+    "keywords": [],
+    "licenses": "MIT",
+    "spm": {
+        "output": [
+            "./index/src/main.js",
+            "./index/src/style.css"
+        ],
+        "alias": {},
+        "devAlias": {},
+        "engines": {}
+    }
+}

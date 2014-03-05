@@ -1,0 +1,29 @@
+{
+    "family": "shadow",
+    "name": "index",
+    "version": "1.0.0",
+    "description": "Index Static Files",
+    "homepage": "https://github.com/root/static",
+    "author": "mopvhs",
+    "maintainers": [
+        "mopvhs"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/root/static.git"
+    },
+    "bugs": {
+        "url": ""
+    },
+    "keywords": [],
+    "licenses": "MIT",
+    "spm": {
+        "output": [
+            "main.js",
+            "style.css"
+        ],
+        "alias": {},
+        "devAlias": {},
+        "engines": {}
+    }
+}
