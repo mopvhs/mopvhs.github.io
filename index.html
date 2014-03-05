@@ -135,20 +135,21 @@
                                         <input class="ui-input" type="text" name="email"> <span class="ui-form-other"></span>
                                         <p class="ui-form-explain"></p>
                                     </div>
-
+                                    <!--
                                     <div class="ui-form-item">
                                         <label for="" class="ui-label">
                                             <span class="ui-form-required">*</span>用户名
                                         </label>
-                                        <input class="ui-input" type="text"> <span class="ui-form-other"></span>
+                                        <input class="ui-input" type="text" name="uname"> <span class="ui-form-other"></span>
                                         <p class="ui-form-explain"></p>
                                     </div>
+                                    -->
 
                                     <div class="ui-form-item">
                                         <label for="" class="ui-label">
                                             <span class="ui-form-required">*</span>密码
                                         </label>
-                                        <input class="ui-input ui-input-large" type="password"> <span class="ui-form-other"></span>
+                                        <input class="ui-input ui-input-large" type="password" name="passwd"> <span class="ui-form-other"></span>
                                         <p class="ui-form-explain"></p>
                                     </div>
 
@@ -160,7 +161,7 @@
                                     </div>
 
                                     <div class="ui-form-item">
-                                        <input type="button" class="ui-button ui-button-mwhite" value="注册">
+                                        <input type="button" class="ui-button ui-button-mwhite" id="register-btn" value="注册">
                                     </div>
                                 </fieldset>
                             </form>
@@ -308,6 +309,37 @@
                             });
                         });
 
+                    });
+
+                    $('#register-btn').click(function(e){
+                        e.preventDefault();
+                        var formData = $('#register-form').serialize();
+                        console.log(formData);
+                        var request = $.ajax({
+                            url: "http://meal-dev.mopvhs.com/api/register",
+                            type: "POST",
+                            data: formData,
+                            dataType: "jsonp"
+                        });
+                        request.done(function( result ) {
+                            console.log(result);
+                            if(result.success) {
+                                Cookie.set('auth_str', result.auth_str, {
+                                    domain: 'github.io',
+                                    path: '/',
+                                    expires: 30
+                                });
+                            } else {
+                                console.log(result);
+                            }
+                        });
+                        request.fail(function( jqXHR, textStatus ) {
+                            seajs.use(['dialog'], function(Dialog) {
+                                new Dialog({
+                                    content: '<div style="padding:50px">请求失败，' + textStatus + '，请刷新页面重试！</div>'
+                                }).show();
+                            });
+                        });
                     });
 
                     $('#clickme').click(function(e){
