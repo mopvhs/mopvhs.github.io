@@ -20,7 +20,8 @@
     "spm": {
         "output": [
             "main.js",
-            "style.css"
+            "style.css",
+            "bg.png"
         ],
         "alias": {},
         "devAlias": {},

@@ -2,7 +2,7 @@
  * Created by mopvhs on 14-3-5.
  */
 define("shadow/index/1.0.0/main-debug", [ "jquery-debug", "cookie-debug", "tabs-debug", "dialog-debug" ], function(require) {
-    var $ = require("jquery-debug"), Cookie = require("cookie-debug"), apiUrl = "";
+    var $ = require("jquery-debug"), Cookie = require("cookie-debug"), apiUrl = "http://www.tulongzhiji.com/meal/";
     var environment = "production";
     if (location.href.indexOf("?dev") > 0) {
         environment = "development";
@@ -38,7 +38,7 @@ define("shadow/index/1.0.0/main-debug", [ "jquery-debug", "cookie-debug", "tabs-
                     path: "/",
                     expires: 30
                 });
-                window.location.refresh();
+                window.location.reload();
             } else {
                 new Dialog({
                     content: '<div style="padding:50px">' + result.message + "</div>"
@@ -68,7 +68,7 @@ define("shadow/index/1.0.0/main-debug", [ "jquery-debug", "cookie-debug", "tabs-
                     path: "/",
                     expires: 30
                 });
-                window.location.refresh();
+                window.location.reload();
             } else {
                 new Dialog({
                     content: '<div style="padding:50px">' + result.message + "</div>"

@@ -5,7 +5,7 @@ define(function(require){
 
     var $ = require('jquery'),
         Cookie = require('cookie'),
-        apiUrl = '';
+        apiUrl = 'http://www.tulongzhiji.com/meal/';
     var environment = 'production';
     if (location.href.indexOf("?dev") > 0) {
         environment = 'development';
@@ -44,7 +44,7 @@ define(function(require){
                     path: '/',
                     expires: 30
                 });
-                window.location.refresh();
+                window.location.reload();
             } else {
                 new Dialog({
                     content: '<div style="padding:50px">' + result.message + '</div>'
@@ -76,7 +76,7 @@ define(function(require){
                     path: '/',
                     expires: 30
                 });
-                window.location.refresh();
+                window.location.reload();
             } else {
                 new Dialog({
                     content: '<div style="padding:50px">' + result.message + '</div>'
