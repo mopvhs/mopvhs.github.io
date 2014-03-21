@@ -1,5 +1,5 @@
-/*! define shadow/index/1.0.0/style-debug.css */
-/*! block shadow/index/1.0.0/reset-debug.css */
+/*! define shadow/leagueoffruits/1.0.0/style-debug.css */
+/*! block shadow/leagueoffruits/1.0.0/reset-debug.css */
 /*
 Copyright 2011, KISSY UI Library v1.20
 MIT Licensed
@@ -65,9 +65,9 @@ mark { background: #ff0; }
 .hidden {
     display: none;
 }
-/*! endblock shadow/index/1.0.0/reset-debug.css */
+/*! endblock shadow/leagueoffruits/1.0.0/reset-debug.css */
 
-/*! block shadow/index/1.0.0/978-debug.css */
+/*! block shadow/leagueoffruits/1.0.0/978-debug.css */
 /*
 
 978 Grid System CSS Framework
@@ -115,7 +115,7 @@ div.col9 { width: 726px; }
 div.col10 { width: 810px; }
 div.col11 { width: 894px; }
 div.col12 { width: 978px; }
-/*! endblock shadow/index/1.0.0/978-debug.css */
+/*! endblock shadow/leagueoffruits/1.0.0/978-debug.css */
 
 .ui-dialog-close:hover {
     text-decoration: none;

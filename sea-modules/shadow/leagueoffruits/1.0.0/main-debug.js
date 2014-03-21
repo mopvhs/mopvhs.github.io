@@ -1,7 +1,7 @@
 /**
  * Created by mopvhs on 14-3-5.
  */
-define("shadow/index/1.0.0/main-debug", [ "jquery-debug", "cookie-debug", "dialog-debug", "tabs-debug" ], function(require) {
+define("shadow/leagueoffruits/1.0.0/main-debug", [ "jquery-debug", "cookie-debug", "dialog-debug", "tabs-debug" ], function(require) {
     var $ = require("jquery-debug"), Cookie = require("cookie-debug"), Dialog = require("dialog-debug"), Tabs = require("tabs-debug");
     var apiUrl = "http://www.tulongzhiji.com/meal/", environment = "production";
     if (location.href.indexOf("?dev") > 0) {
