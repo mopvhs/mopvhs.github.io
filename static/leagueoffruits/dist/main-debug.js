@@ -114,7 +114,6 @@ define("shadow/leagueoffruits/1.0.0/main-debug", [ "jquery-debug", "cookie-debug
         dataType: "jsonp"
     });
     request.done(function(result) {
-        console.log(result);
         if (result.success) {
             $(".guest-nav").hide();
             $(".member-nav").show();

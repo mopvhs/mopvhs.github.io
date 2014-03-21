@@ -205,11 +205,12 @@
                     "alice-nav": "alice/nav/1.0.0/nav.css",
                     "alice-form": "alice/form/1.0.2/form.css",
                     "alice-button": "alice/button/1.2.0/button.css",
-                    "alice-dialog": "arale/dialog/1.2.5/dialog.css",
+//                    "alice-dialog": "arale/dialog/1.2.5/dialog",
                     "alice-list": "alice/list/1.0.1/list.css",
                     "jquery172": "jquery/jquery/1.7.2/jquery",
                     "backstretch": "mopvhs/backstretch/2.0.4/backstretch",
-//                    "dialog": "arale/dialog/1.2.5/dialog",
+                    "dialog": "arale/dialog/1.2.5/dialog",
+                    "dialog-css": "arale/dialog/1.2.5/dialog.css",
                     "tabs": "arale/switchable/1.0.2/tabs",
                     "cookie": "arale/cookie/1.0.2/cookie",
                     "alice-gird": "alice/grid/1.0.0/grid.css",
@@ -217,6 +218,7 @@
                     "alice-step": "alice/step/1.0.3/step.css",
                     "alice-box": "alice/box/1.1.0/box.css",
                     "style": "shadow/leagueoffruits/1.0.0/style.css",
+                    "leagueoffruits": "shadow/leagueoffruits/1.0.0/main",
                     "alice-table": "alice/table/1.0.1/table.css"
                 },
                 // 预加载项
@@ -227,7 +229,8 @@
                     'alice-nav',
                     'alice-form',
                     'alice-button',
-                    'alice-dialog',
+                    'dialog',
+                    'dialog-css',
                     'alice-list',
                     "alice-tab",
                     'alice-table',
@@ -248,8 +251,7 @@
             }
             // For production
             else {
-                seajs.use("../sea-modules/shadow/leagueoffruits/1.0.0/main");
-//                seajs.use('style');
+                seajs.use('leagueoffruits');
             }
 
             // 加载依赖的 css 文件

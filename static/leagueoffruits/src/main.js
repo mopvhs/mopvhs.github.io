@@ -128,7 +128,6 @@ define(function(require){
         dataType: "jsonp"
     });
     request.done(function( result ) {
-        console.log(result);
         if(result.success) {
             $('.guest-nav').hide();
             $('.member-nav').show();
