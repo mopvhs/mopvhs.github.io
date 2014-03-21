@@ -128,24 +128,24 @@
         </div>
 
         <div class="ui-form-item">
-            <label for="" class="ui-label">
+            <label for="r-email" class="ui-label">
                 <span class="ui-form-required">*</span>邮箱
             </label>
-            <input class="ui-input" type="text" name="email"> <span class="ui-form-other"></span>
+            <input class="ui-input" type="text" name="email" id="r-email"> <span class="ui-form-other"></span>
             <p class="ui-form-explain"></p>
         </div>
 
         <div class="ui-form-item">
-            <label for="" class="ui-label">
+            <label for="r-passwd" class="ui-label">
                 <span class="ui-form-required">*</span>密码
             </label>
-            <input class="ui-input ui-input-large" type="password" name="passwd"> <span class="ui-form-other"></span>
+            <input class="ui-input ui-input-large" type="password" name="passwd" id="r-passwd"> <span class="ui-form-other"></span>
             <p class="ui-form-explain"></p>
         </div>
 
         <div class="ui-form-item">
             <label for="test">
-                <input class="ui-checkbox" id="test" value="" type="checkbox">
+                <input class="ui-checkbox" id="test" value="" type="checkbox" checked="checked">
                 我已阅读并接受那什么协议
             </label>
         </div>
@@ -166,18 +166,18 @@
         </div>
 
         <div class="ui-form-item">
-            <label for="" class="ui-label">
+            <label for="l-email" class="ui-label">
                 <span class="ui-form-required">*</span>邮箱
             </label>
-            <input class="ui-input" type="text" name="email"> <span class="ui-form-other"></span>
+            <input class="ui-input" type="text" name="email" id="l-email"> <span class="ui-form-other"></span>
             <p class="ui-form-explain"></p>
         </div>
 
         <div class="ui-form-item">
-            <label for="" class="ui-label">
+            <label for="l-passwd" class="ui-label">
                 <span class="ui-form-required">*</span>密码
             </label>
-            <input class="ui-input" type="password" name="passwd"> <span class="ui-form-other"></span>
+            <input class="ui-input" type="password" name="passwd" id="l-passwd"> <span class="ui-form-other"></span>
             <p class="ui-form-explain"></p>
         </div>
 
@@ -188,46 +188,52 @@
 </form>
 
 </body>
-<script charset="utf-8" id="seajsnode" src="../sea-modules/seajs/seajs/2.1.1/sea.js"></script>
-<!--<script src="sea-modules/seajs/seajs-combo/1.0.0/seajs-combo.js"></script>-->
+<script charset="utf-8" id="seajsnode" src="http://www.xuncheba.com/sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+<script src="http://www.xuncheba.com/sea-modules/seajs/seajs-combo/1.0.0/seajs-combo.js"></script>
 <!-- seajs config 配置 -->
 <!--<script src="./static/seajs-config.js"></script>-->
 <script>
-    cssArray.push('gallery/normalize/2.1.3/normalize.css');
-    cssArray.push('alice/nav/1.0.0/nav.css');
-    cssArray.push('alice/form/1.0.2/form.css');
-    cssArray.push('alice/button/1.2.0/button.css');
-    cssArray.push('arale/dialog/1.2.5/dialog.css');
-    cssArray.push('alice/list/1.0.1/list.css');
     try {
         (function() {
             seajs.config({
-                base: "../sea-modules",
+                base: "http://www.xuncheba.com/sea-modules/",
                 alias: {
                     "$": "atans/jquery/1.10.2/jquery",
 //                    "$": "jquery/jquery/1.7.2/jquery",
                     "jquery": "atans/jquery/1.10.2/jquery",
+                    "normalize": "gallery/normalize/2.1.3/normalize.css",
+                    "alice-nav": "alice/nav/1.0.0/nav.css",
+                    "alice-form": "alice/form/1.0.2/form.css",
+                    "alice-button": "alice/button/1.2.0/button.css",
+                    "alice-dialog": "arale/dialog/1.2.5/dialog.css",
+                    "alice-list": "alice/list/1.0.1/list.css",
                     "jquery172": "jquery/jquery/1.7.2/jquery",
                     "backstretch": "mopvhs/backstretch/2.0.4/backstretch",
-                    "dialog": "arale/dialog/1.2.5/dialog",
+//                    "dialog": "arale/dialog/1.2.5/dialog",
                     "tabs": "arale/switchable/1.0.2/tabs",
                     "cookie": "arale/cookie/1.0.2/cookie",
                     "alice-gird": "alice/grid/1.0.0/grid.css",
                     "alice-tab": "alice/tab/1.0.1/tab.css",
                     "alice-step": "alice/step/1.0.3/step.css",
                     "alice-box": "alice/box/1.1.0/box.css",
+                    "style": "shadow/leagueoffruits/1.0.0/style.css",
                     "alice-table": "alice/table/1.0.1/table.css"
                 },
                 // 预加载项
                 preload: [
                     '$',
-                    'jquery',
                     'cookie',
                     'alice-gird',
+                    'alice-nav',
+                    'alice-form',
+                    'alice-button',
+                    'alice-dialog',
+                    'alice-list',
                     "alice-tab",
                     'alice-table',
                     'alice-step',
                     'alice-box',
+                    'style',
                     'backstretch'
                 ],
                 // 文件编码
@@ -243,7 +249,7 @@
             // For production
             else {
                 seajs.use("../sea-modules/shadow/leagueoffruits/1.0.0/main");
-                cssArray.push('../sea-modules/shadow/leagueoffruits/1.0.0/style.css');
+//                seajs.use('style');
             }
 
             // 加载依赖的 css 文件

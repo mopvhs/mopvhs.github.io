@@ -24,11 +24,11 @@ define(function(require){
         }).show();
     });
 
-    var imgList = ["1003286.jpg", "1024447.jpg", "1027644.jpg", "1103210.jpg", "1103219.jpg", "1107398.jpg", "1108619.jpg", "125251.jpg", "125631.jpg", "196567.jpg", "379564.jpg", "555738.jpg", "571865.jpg", "65446.jpg", "827021.jpg", "83572.jpg", "87198.jpg", "881930.png", "881934.jpg", "891662.jpg", "938574.jpg"];
-    for(var i in imgList) {
-        imgList[i] = 'http://mopvhs-dev.github.io/static/images/wallpaper-' + imgList[i];
-    }
-    $.backstretch(imgList, {duration: 3000, fade: 750});
+//    var imgList = ["1003286.jpg", "1024447.jpg", "1027644.jpg", "1103210.jpg", "1103219.jpg", "1107398.jpg", "1108619.jpg", "125251.jpg", "125631.jpg", "196567.jpg", "379564.jpg", "555738.jpg", "571865.jpg", "65446.jpg", "827021.jpg", "83572.jpg", "87198.jpg", "881930.png", "881934.jpg", "891662.jpg", "938574.jpg"];
+//    for(var i in imgList) {
+//        imgList[i] = 'http://mopvhs-dev.github.io/static/images/wallpaper-' + imgList[i];
+//    }
+//    $.backstretch(imgList, {duration: 3000, fade: 750});
 
 //    window.console && console.log && console.log($.fn.jquery);
 
