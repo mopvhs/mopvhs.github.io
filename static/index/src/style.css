@@ -7,14 +7,15 @@ body {
     background-image: url("bg.png");
     background-position: left 0px;
     background-repeat: no-repeat;
+    background: #93C5EA url(http://mat1.gtimg.com/www/mb/skin/jd/wsh/bg.jpg) fixed center top repeat-x;
 }
 .header {
     margin-bottom: 20px;
 }
 .sidebar,
 .main {
-    height: 600px;
-    line-height: 600px;
+    min-height: 600px;
+    /*line-height: 600px;*/
 }
 .logo {
     font-size: 26px;

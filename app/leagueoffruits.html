@@ -1,0 +1,261 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="zh-CN" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>水果联盟 - League of Fruits</title>
+    <link href="http://mopvhs.github.io" rel="dns-prefetch" />
+    <meta name="keywords" content="League of Fruits" />
+    <meta name="description" content="League of Fruits" />
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/font.css" />
+    <script type="text/javascript">
+        var cssArray = [];
+    </script>
+</head>
+<body>
+
+<div class="wrapper layout-978">
+    <div class="header row">
+
+    </div>
+    <div class="row">
+        <div class="ui-nav">
+            <ul class="ui-nav-main">
+                <li class="ui-nav-item ui-nav-item-current">
+                    <a href="#">水果联盟</a>
+                    <ul class="ui-nav-submain guest-nav">
+                        <li class="ui-nav-subitem"><a href="javascript:;">League of Fruits</a></li>
+                        <li class="ui-nav-subitem"><a href="javascript:;" id="G_login">登录</a></li>
+                        <li class="ui-nav-subitem"><a href="javascript:;" id="G_register">注册</a></li>
+                    </ul>
+                    <ul class="ui-nav-submain member-nav hidden">
+                        <li class="ui-nav-subitem"><a href="javascript:;">League of Fruits</a></li>
+                        <li class="ui-nav-subitem"><a href="javascript:;"><i class="iconfont">&#x346b;</i><span class="user-status"></span></a></li>
+                        <li class="ui-nav-subitem"><a href="javascript:;" id="G_logout">退出</a></li>
+                    </ul>
+                </li>
+                <li class="ui-nav-item"><a href="javascript:;" id="G_about">关于我们</a></li>
+                <li class="ui-nav-item"><a href="javascript:;">加入我们</a></li>
+            </ul>
+            <div class="ui-nav-subcontainer"></div>
+        </div>
+    </div>
+    <div class="row"></div>
+    <div class="row content">
+        <div class="col3 sidebar">
+            <ul>
+                <li class=""><a href="#modules-box" class="first">苹果<i class="iconfont" title="苹果">苹果</i></a></li>
+                <li class=""><a href="#modules-step">草莓<i class="iconfont" title="草莓">草莓</i></a></li>
+                <li class=""><a href="#modules-step">圣女果<i class="iconfont" title="圣女果">圣女果</i></a></li>
+                <li class=""><a href="#modules-step">千禧果<i class="iconfont" title="千禧果">千禧果</i></a></li>
+            </ul>
+        </div>
+        <div class="main col9">
+            <div class="main-box ui-box">
+                <div class="ui-box-head">
+                    <h3 class="ui-box-head-title">简介</h3>
+                    <span class="ui-box-head-text">时令水果，产地直供</span>
+                    <a href="#" class="ui-box-head-more">更多</a>
+                </div>
+                <div class="ui-box-container">
+                    <div class="ui-box-content">下午三点半准时出门采购，雷打不动</div>
+                </div>
+            </div>
+            <div class="main-box ui-box staff-box">
+                <div class="ui-box-head">
+                    <h3 class="ui-box-head-title">水果清洗</h3>
+                    <span class="ui-box-head-text">专业水果清洗，艺术拼盘，苹果去皮去核切片</span>
+                    <a href="#" class="ui-box-head-more">更多</a>
+                </div>
+                <div class="ui-box-container">
+                    <div class="ui-box-content">
+                    </div>
+                </div>
+            </div>
+            <div class="main-box ui-box">
+                <div class="ui-box-head">
+                    <h3 class="ui-box-head-title">草莓</h3>
+                    <span class="ui-box-head-text">新鲜草莓，现摘现卖</span>
+                    <a href="#" class="ui-box-head-more">更多</a>
+                </div>
+                <div class="ui-box-container">
+                    <div class="ui-box-content">
+                        <p>圣女果 6元/斤</p>
+                        <p>千禧果 8元/斤</p>
+                        <p>草莓 7.5元/斤</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-box ui-box hidden" id="about-box">
+                <div class="ui-box-head">
+                    <h3 class="ui-box-head-title">关于我们</h3>
+                    <span class="ui-box-head-text">新鲜水果，现买现吃</span>
+                </div>
+                <div class="ui-box-container">
+                    <div class="ui-box-content">
+                        <p>下午三点半准时出门采购，雷打不动</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-end">&nbsp;</div>
+    </div>
+    <div class="img-box row">
+
+    </div>
+
+    <div class="row" style="display: none">
+        <div class="col6 h-293"></div>
+        <div class="col6 h-293"></div>
+        <div class="row-end">&nbsp;</div>
+    </div>
+</div>
+
+<form class="ui-form hidden" name="" method="post" action="#" id="register-form">
+    <fieldset>
+        <legend>注册</legend>
+
+        <div class="ui-form-item">
+            <label for="" class="ui-label"></label>
+            <p class="ui-form-text"></p>
+        </div>
+
+        <div class="ui-form-item">
+            <label for="" class="ui-label">
+                <span class="ui-form-required">*</span>邮箱
+            </label>
+            <input class="ui-input" type="text" name="email"> <span class="ui-form-other"></span>
+            <p class="ui-form-explain"></p>
+        </div>
+
+        <div class="ui-form-item">
+            <label for="" class="ui-label">
+                <span class="ui-form-required">*</span>密码
+            </label>
+            <input class="ui-input ui-input-large" type="password" name="passwd"> <span class="ui-form-other"></span>
+            <p class="ui-form-explain"></p>
+        </div>
+
+        <div class="ui-form-item">
+            <label for="test">
+                <input class="ui-checkbox" id="test" value="" type="checkbox">
+                我已阅读并接受那什么协议
+            </label>
+        </div>
+
+        <div class="ui-form-item">
+            <input type="button" class="ui-button ui-button-mwhite" id="register-btn" value="注册">
+        </div>
+    </fieldset>
+</form>
+
+<form class="ui-form hidden" name="" method="post" action="#" id="login-form">
+    <fieldset>
+        <legend>登录</legend>
+
+        <div class="ui-form-item">
+            <label for="" class="ui-label"></label>
+            <p class="ui-form-text"></p>
+        </div>
+
+        <div class="ui-form-item">
+            <label for="" class="ui-label">
+                <span class="ui-form-required">*</span>邮箱
+            </label>
+            <input class="ui-input" type="text" name="email"> <span class="ui-form-other"></span>
+            <p class="ui-form-explain"></p>
+        </div>
+
+        <div class="ui-form-item">
+            <label for="" class="ui-label">
+                <span class="ui-form-required">*</span>密码
+            </label>
+            <input class="ui-input" type="password" name="passwd"> <span class="ui-form-other"></span>
+            <p class="ui-form-explain"></p>
+        </div>
+
+        <div class="ui-form-item">
+            <input type="submit" class="ui-button ui-button-morange" id="login-btn" value="登录">
+        </div>
+    </fieldset>
+</form>
+
+</body>
+<script charset="utf-8" id="seajsnode" src="../sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+<!--<script src="sea-modules/seajs/seajs-combo/1.0.0/seajs-combo.js"></script>-->
+<!-- seajs config 配置 -->
+<!--<script src="./static/seajs-config.js"></script>-->
+<script>
+    cssArray.push('gallery/normalize/2.1.3/normalize.css');
+    cssArray.push('alice/nav/1.0.0/nav.css');
+    cssArray.push('alice/form/1.0.2/form.css');
+    cssArray.push('alice/button/1.2.0/button.css');
+    cssArray.push('arale/dialog/1.2.5/dialog.css');
+    cssArray.push('alice/list/1.0.1/list.css');
+    try {
+        (function() {
+            seajs.config({
+                base: "../sea-modules",
+                alias: {
+                    "$": "atans/jquery/1.10.2/jquery",
+//                    "$": "jquery/jquery/1.7.2/jquery",
+                    "jquery": "atans/jquery/1.10.2/jquery",
+                    "jquery172": "jquery/jquery/1.7.2/jquery",
+                    "backstretch": "mopvhs/backstretch/2.0.4/backstretch",
+                    "dialog": "arale/dialog/1.2.5/dialog",
+                    "tabs": "arale/switchable/1.0.2/tabs",
+                    "cookie": "arale/cookie/1.0.2/cookie",
+                    "alice-gird": "alice/grid/1.0.0/grid.css",
+                    "alice-tab": "alice/tab/1.0.1/tab.css",
+                    "alice-step": "alice/step/1.0.3/step.css",
+                    "alice-box": "alice/box/1.1.0/box.css",
+                    "alice-table": "alice/table/1.0.1/table.css"
+                },
+                // 预加载项
+                preload: [
+                    '$',
+                    'jquery',
+                    'cookie',
+                    'alice-gird',
+                    "alice-tab",
+                    'alice-table',
+                    'alice-step',
+                    'alice-box',
+                    'backstretch'
+                ],
+                // 文件编码
+                charset: 'utf-8'
+            });
+            var environment = 'production';
+            // For development
+            if (location.href.indexOf("?dev") > 0) {
+                environment = 'development';
+                seajs.use("../static/leagueoffruits/src/main");
+                cssArray.push('../static/leagueoffruits/src/style.css');
+            }
+            // For production
+            else {
+                seajs.use("shadow/leagueoffruits/1.0.0/main");
+                cssArray.push('shadow/leagueoffruits/1.0.0/style.css');
+            }
+
+            // 加载依赖的 css 文件
+            for (var i=0; i < cssArray.length; i++) {
+                if (cssArray[i].indexOf('.css') < 0) {
+                    cssArray.splice(i, 1);
+                }
+            }
+            seajs.use(cssArray);
+        })();
+    } catch (e) {
+        window.console && console.log && console.log(e);
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+{
+  "family": "mopvhs",
+  "name": "backstretch",
+  "version": "2.0.4",
+  "description": "Backstretch is a simple jQuery plugin that allows you to add a dynamically-resized, slideshow-capable background image to any page or element. The image will stretch to fit the page/element, and will automatically resize as the window/element size changes.",
+  "homepage": "http://srobbin.com/jquery-plugins/backstretch/",
+  "author": "srobbin",
+  "maintainers": [
+    "mopvhs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srobbin/jquery-backstretch.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "keywords": [],
+  "licenses": "MIT",
+  "spm": {
+    "output": [
+      "backstretch.js",
+      "backstretch.css"
+    ],
+    "alias": {},
+    "devAlias": {},
+    "engines": {}
+  }
+}
