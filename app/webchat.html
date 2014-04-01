@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<script>
+    /**
+     * 确保在页面上最先加载这个js文件，以得到最准确的检测结果
+     *
+     * 页面加载之前，window对象中已经存在的全局变量：默认都当成window原生携带的
+     * 在需要检测全局变量的地方，调用：var theGlobalVarList = GlobalVarsDetector.detect();
+     */
+    var GlobalVarsDetector = (function(){
+        var _onDocStart = {};
+        for(var p in window) {
+            _onDocStart[p] = true;
+        }
+
+        /**
+         * 检测当前页面上已经存在的所有全局变量
+         * @return {Array} 返回全局变量列表
+         * @private
+         */
+        var _detect = function(){
+            var _globalVars = [];
+            for(var p in window) {
+                if(!_onDocStart[p]) {
+                    _globalVars.push(p);
+                }
+            }
+            return _globalVars
+        };
+
+        return {
+            detect : _detect
+        };
+    })();
+</script>
+<body>
+
+</body>
+<script>
+    var theGlobalVarList = GlobalVarsDetector.detect();
+    document.write(theGlobalVarList);
+</script>
+</html>

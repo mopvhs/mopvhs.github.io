@@ -2,8 +2,53 @@
 <html>
 <head>
     <title></title>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/normalize/2.1.3/normalize.min.css" />
+    <link rel="stylesheet" href="http://webchat.qiniudn.com/messenger/messenger.css" />
+    <link rel="stylesheet" href="http://webchat.qiniudn.com/messenger/messenger-theme-future.css" />
+    <style>
+        .messenger {
+            list-style: none;
+        }
+    </style>
 </head>
 <body>
 
 </body>
+<script src="http://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://webchat.qiniudn.com/messenger/messenger.min.js"></script>
+<script src="http://webchat.qiniudn.com/messenger/messenger-theme-future.js"></script>
+<script>
+    Messenger.options = {
+        extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
+        theme: 'future'
+    };
+
+    Messenger().post({
+        message: 'There was an explosion while processing your request.',
+        type: 'info',
+        showCloseButton: true
+    });
+
+    var msg;
+
+    msg = Messenger().post({
+        message: "I'm sorry Hal, I just can't do that.",
+        actions: {
+            retry: {
+                label: '马上重试',
+                phrase: 'Retrying TIME',
+                auto: true,
+                delay: 10,
+                action: function() {}
+            },
+            cancel: {
+                action: function() {
+                    return msg.cancel();
+                }
+            }
+        }
+    });
+
+
+</script>
 </html>
